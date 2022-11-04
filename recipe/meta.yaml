@@ -1,5 +1,5 @@
 {% set name = "pydeck-carto" %}
-{% set version = "0.1.0b8" %}
+{% set version = "0.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 71ccb84df05eceae309ae1f5095145c5cc698a72464f38b5dca980e571d0d1a1
+  sha256: 0ceec71f9e9667d65cc8647ad1bca57bb48ab4fbb9627a732c3e44735c982858
 
 build:
   number: 0
