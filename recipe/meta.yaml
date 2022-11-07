@@ -20,8 +20,8 @@ requirements:
     - pip
   run:
     - python >=3.7
-    - carto-auth >=0.1.0b5
-    - pydeck >=0.8.0b4
+    - pydeck >=0.8.0
+    - carto-auth >=0.1.0
 
 test:
   imports:
