@@ -6,24 +6,26 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 0ceec71f9e9667d65cc8647ad1bca57bb48ab4fbb9627a732c3e44735c982858
 
 build:
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   noarch: python
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - pip
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - pydeck >=0.8.0
     - carto-auth >=0.1.0
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - pydeck_carto
 
